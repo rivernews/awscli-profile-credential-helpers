@@ -2,6 +2,8 @@
 
 [Upstream github repo](https://github.com/aws-samples/awscli-profile-credential-helpers).
 
+The SSO command requires AWS CLI version 2, which is not available through package managers like `pip`. We'll use a dispensable docker container for AWS CLI to minimize impact on your system file especially you have AWS CLI version 1 installed and haven't migrated to version 2 yet.
+
 ## Install
 
 1. Make sure your python is later version e.g. later than 3.7
