@@ -24,7 +24,7 @@ region = us-west-2
 sso_start_url = https://clingen.awsapps.com/start
 sso_region = us-west-2
 sso_account_id = 123123123123 <-- find this in the SSO portal
-sso_role_name = AWSPowerUserAccess
+sso_role_name = AWSAdministratorAccess
 
 ```
 
@@ -32,10 +32,10 @@ sso_role_name = AWSPowerUserAccess
 
 ```
 $ python aws-refresh-credentials test
-Getting credentials for profile test (arn:aws:iam::***:role/AWSPowerUserAccess)
+Getting credentials for profile test (arn:aws:iam::***:role/AWSAdministratorAccess)
 Saved credentials for profile test
 ```
 
-5. In case you get stuck in Step 4 and terminal stops at `Getting credentials for profile admintest (arn:aws:iam::123123123123:role/AWSAdminAccess)`, you can abort the process and run the following command instead: `docker run --rm -it -v ~/.aws:/root/.aws amazon/aws-cli sso --profile admintest login`. After you complete the browser verification process (you'll be instructed by the prompts in terminal), you can retry step 4.
+5. In case you get stuck in Step 4 and terminal stops at `Getting credentials for profile test (arn:aws:iam::123123123123:role/AWSAdministratorAccess)`, you can abort the process and run the following command instead: `docker run --rm -it -v ~/.aws:/root/.aws amazon/aws-cli sso --profile test login`. After you complete the browser verification process (you'll be instructed by the prompts in terminal), you can retry step 4.
 
 6. Check out `~/.aws/credentials`, you should now see `test` profile credential is updated.
