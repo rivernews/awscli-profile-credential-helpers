@@ -36,4 +36,6 @@ Getting credentials for profile test (arn:aws:iam::***:role/AWSPowerUserAccess)
 Saved credentials for profile test
 ```
 
-5. Check out `~/.aws/credentials`, you should now see `test` profile credential is updated.
+5. In case you get stuck in Step 4 and terminal stops at `Getting credentials for profile admintest (arn:aws:iam::123123123123:role/AWSAdminAccess)`, you can abort the process and run the following command instead: `docker run --rm -it -v ~/.aws:/root/.aws amazon/aws-cli sso --profile admintest login`. After you complete the browser verification process (you'll be instructed by the prompts in terminal), you can retry step 4.
+
+6. Check out `~/.aws/credentials`, you should now see `test` profile credential is updated.
