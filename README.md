@@ -13,7 +13,7 @@ The SSO command requires AWS CLI version 2, which is not available through packa
 
 1. You need docker running. If you don't have docker yet, assume you're on Macos, install docker by `brew cask install docker`.
 2. Activate virtual environment
-3. Prepare a config file at `~/.aws/config`
+3. Prepare a config file at `~/.aws/config` and copy paste the following contents. If you already have this file, you may just add the `[profile test]` section. Remember to replace the account id with the correct SSO id account value (e.g. the `clingen-aws-nonprod`'s id, all digits).
 
 ```
 [default]
