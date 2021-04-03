@@ -28,7 +28,7 @@ sso_role_name = AWSAdministratorAccess
 
 ```
 
-4. Run `python aws-refresh-credentials test`
+4. Run `python aws-refresh-credentials test`. If prompted URL for verification in browser, please do so.
 
 ```
 $ python aws-refresh-credentials test
@@ -36,6 +36,6 @@ Getting credentials for profile test (arn:aws:iam::***:role/AWSAdministratorAcce
 Saved credentials for profile test
 ```
 
-5. In case you get stuck in Step 4 and terminal stops at `Getting credentials for profile test (arn:aws:iam::123123123123:role/AWSAdministratorAccess)`, you can abort the process and run the following command instead: `docker run --rm -it -v ~/.aws:/root/.aws amazon/aws-cli sso --profile test login`. After you complete the browser verification process (you'll be instructed by the prompts in terminal), you can retry step 4.
+5. In case you get stuck in Step 4 and terminal stops at `Getting credentials for profile test (arn:aws:iam::123123123123:role/AWSAdministratorAccess)`, you can abort the process and run the following command instead: `docker run --rm -it -v ~/.aws:/root/.aws amazon/aws-cli sso --profile test login`. After you complete the browser verification process (you'll be instructed by the prompts in terminal), you can retry step 4. Or see this [AWS doc](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-sso.html) on using SSO with AWS CLI.
 
 6. Check out `~/.aws/credentials`, you should now see `test` profile credential is updated.
